@@ -1,0 +1,10 @@
+<h1>Tomar Pedido - Mesa {{ mesa.numero }}</h1>
+<form method="POST" action="{% url 'tomar_pedido' mesa.id %}">
+  {% csrf_token %}
+  <h2>Selecciona los platos:</h2>
+  {% for plato in platos %}
+    <input type="checkbox" name="platos" value="{{ plato.id }}">{{ plato.nombre }} - {{ plato.precio }}<br>
+  {% endfor %}
+  <button type="submit">Realizar Pedido</button>
+</form>
+

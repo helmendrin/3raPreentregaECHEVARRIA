@@ -1,0 +1,6 @@
+<h1>Gestión de Mesas</h1>
+<ul>
+  {% for mesa in mesas %}
+    <li>Mesa {{ mesa.numero }} - Capacidad: {{ mesa.capacidad }}</li>
+  {% endfor %}
+</ul>
